@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6MAN | The 6MAN Army</title>
+  <meta name="description" content="The coldest drop of the year. $6MAN — join the 6MAN Army." />
+  <meta property="og:title" content="6MAN — The 6MAN Army" />
+  <meta property="og:description" content="The coldest drop of the year. $6MAN — join the 6MAN Army." />
+  <meta property="og:image" content="assets/6man-logo.png" />
+  <link rel="icon" type="image/png" href="assets/6man-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <img src="assets/6man-logo.png" alt="$6MAN logo" class="logo">
+      <span>6MAN</span>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#how">How to Buy</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#links">Links</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>The 6MAN Army</h1>
+      <p class="tag">The coldest drop of the year. <strong>$6MAN</strong> — stay cold. Stay ready.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://x.com/The6ManArmy" target="_blank" rel="noopener">Follow on X</a>
+        <a class="btn ghost" href="#how">How to Buy</a>
+      </div>
+      <div class="contract">
+        <span id="contract-text">CA: <em>ADD_CONTRACT_ADDRESS_HERE</em></span>
+        <button id="copy-btn" class="copy">Copy</button>
+      </div>
+    </div>
+    <div class="snow"></div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About $6MAN</h2>
+      <p>
+        $6MAN is a community-driven memecoin celebrating the icy energy of the season.
+        Built for the culture, by the culture — the 6MAN Army rallies around moments that are <em>too cold to ignore</em>.
+      </p>
+      <div class="pill-grid">
+        <div class="pill">No roadmap. Just vibes.</div>
+        <div class="pill">Fair launch spirit</div>
+        <div class="pill">Community first</div>
+      </div>
+      <div class="note">Not affiliated with Drake, OVO, or any artist/label. For fun, memes, and community.</div>
+    </div>
+  </section>
+
+  <section id="how" class="section how">
+    <div class="container">
+      <h2>How to Buy</h2>
+      <ol>
+        <li>Get SOL in your wallet (Phantom or Solflare).</li>
+        <li>Go to your preferred DEX (e.g., Jupiter/BonkBot) and paste the contract address.</li>
+        <li>Swap SOL → <strong>$6MAN</strong>. Stay cold. ❄</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="tokenomics" class="section tokenomics">
+    <div class="container">
+      <h2>Tokenomics</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Total Supply</h3>
+          <p class="big">1,000,000,000</p>
+        </div>
+        <div class="card">
+          <h3>Decimals</h3>
+          <p class="big">6</p>
+        </div>
+        <div class="card">
+          <h3>Taxes</h3>
+          <p>0/0 — we hate fees.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="links" class="section links">
+    <div class="container">
+      <h2>Links</h2>
+      <div class="link-grid">
+        <a class="link-tile" href="https://x.com/The6ManArmy" target="_blank" rel="noopener">
+          <span>𝕏 / Twitter</span> ↗
+        </a>
+        <a class="link-tile" href="#" target="_blank" rel="noopener">
+          <span>Telegram</span> ↗
+        </a>
+        <a class="link-tile" href="#" target="_blank" rel="noopener">
+          <span>Dextools / Chart</span> ↗
+        </a>
+        <a class="link-tile" href="#" target="_blank" rel="noopener">
+          <span>Buy on DEX</span> ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> 6MAN — Stay cold. This site is for entertainment and community purposes only. Not financial advice.</p>
+    </div>
+  </footer>
+
+<script>
+  // Copy contract
+  const copyBtn = document.getElementById('copy-btn');
+  copyBtn?.addEventListener('click', () => {
+    const text = document.getElementById('contract-text').innerText.replace('CA: ', '');
+    navigator.clipboard.writeText(text);
+    copyBtn.innerText = 'Copied!';
+    setTimeout(()=> copyBtn.innerText = 'Copy', 1200);
+  });
+  // Year
+  document.getElementById('year').innerText = new Date().getFullYear();
+</script>
+</body>
+</html>
