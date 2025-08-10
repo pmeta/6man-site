@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6MAN | The 6MAN Army</title>
+
+<!-- Favicon (emoji) so it always works, no files needed -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E❄️%3C/text%3E%3C/svg%3E">
+
+<meta name="description" content="The coldest drop of the year. $6MAN — stay cold. Stay ready.">
+<meta name="theme-color" content="#0e1b28">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root{
+    --bg:#0b1520; --bg2:#0e1b28; --ice:#cfe8ff; --ice2:#91c5ff;
+    --text:#e9f2fb; --muted:#9bb1c7; --ring:rgba(145,197,255,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 20% -10%, #14304a 0%, var(--bg) 55%), var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  a{color:var(--ice2);text-decoration:none}
+  .nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(140%) blur(8px);background:linear-gradient(180deg, rgba(13,24,36,.8), rgba(13,24,36,.2));border-bottom:1px solid rgba(145,197,255,.12);display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+  .brand .logo{width:28px;height:28px;border-radius:50%; display:grid;place-items:center; background:#11263b; border:1px solid rgba(145,197,255,.25); font-size:16px}
+  .nav nav a{margin-left:16px;opacity:.9}
+  .hero{min-height:72vh;display:grid;place-items:center;text-align:center;padding:80px 16px;position:relative;background:radial-gradient(1000px 420px at 50% -10%, #16314a, transparent 60%)}
+  .hero h1{font-size:clamp(40px,7vw,72px);margin:0 0 10px;letter-spacing:1px;text-shadow:0 6px 24px rgba(0,0,0,.35)}
+  .tag{font-size:clamp(16px,2.4vw,22px);color:var(--ice);opacity:.95;margin:0 0 22px}
+  .btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid var(--ring);box-shadow:0 0 0 4px rgba(145,197,255,.06) inset;transition:.2s;font-weight:700}
+  .btn.primary{background:linear-gradient(180deg,#3aa0ff,#1e7ddd);color:white}
+  .btn.ghost{color:var(--ice2);margin-left:10px}
+  .btn:hover{transform:translateY(-1px)}
+  .contract{margin-top:18px;display:inline-flex;gap:10px;align-items:center;padding:8px 12px;border:1px solid var(--ring);background:rgba(20,40,60,.35);border-radius:10px;font-size:14px;color:var(--ice)}
+  .copy{background:transparent;border:1px solid var(--ring);color:var(--ice2);padding:6px 10px;border-radius:8px;cursor:pointer}
+  .section{padding:72px 16px}
+  .container{max-width:1000px;margin:0 auto}
+  h2{font-size:clamp(28px,5vw,40px);margin:0 0 12px}
+  .about p{color:var(--ice)}
+  .pill-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .pill{padding:8px 12px;border-radius:999px;border:1px solid var(--ring);background:rgba(20,40,60,.35);color:var(--ice2);font-size:14px}
+  .note{margin-top:16px;color:var(--muted);font-size:13px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+  .card{background:linear-gradient(180deg, rgba(21,42,64,.8), rgba(15,30,48,.8));border:1px solid var(--ring);border-radius:16px;padding:18px}
+  .big{font-size:28px;color:var(--ice)}
+  .link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+  .link-tile{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--ring);background:rgba(20,40,60,.35);padding:16px;border-radius:12px}
+  .footer{padding:30px 0;border-top:1px solid rgba(145,197,255,.12);background:rgba(10,20,30,.6)}
+  /* subtle snow */
+  .snow{pointer-events:none;position:absolute;inset:0;background-image:
+    radial-gradient(2px 2px at 20px 20px, rgba(255,255,255,.35) 50%, transparent 50%),
+    radial-gradient(3px 3px at 50px 80px, rgba(255,255,255,.22) 50%, transparent 50%),
+    radial-gradient(2px 2px at 130px 40px, rgba(255,255,255,.3) 50%, transparent 50%);
+    background-repeat:repeat;animation:snow 12s linear infinite}
+  @keyframes snow{from{background-position:0 0,0 0,0 0} to{background-position:0 600px,0 800px,0 500px}}
+  @media (max-width:720px){ .nav nav{display:none} .btn.ghost{margin-left:0;margin-top:8px} }
+</style>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <div class="logo">❄️</div>
+      <span>6MAN</span>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#how">How to Buy</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#links">Links</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>The 6MAN Army</h1>
+      <p class="tag">The coldest drop of the year. <strong>$6MAN</strong> — stay cold. Stay ready.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://x.com/The6ManArmy" target="_blank" rel="noopener">Follow on X</a>
+        <a class="btn ghost" href="#how">How to Buy</a>
+      </div>
+      <div class="contract">
+        <span id="contract-text">CA: <em>ADD_CONTRACT_ADDRESS_HERE</em></span>
+        <button id="copy-btn" class="copy">Copy</button>
+      </div>
+    </div>
+    <div class="snow"></div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About $6MAN</h2>
+      <p>$6MAN is a community-driven memecoin celebrating icy drop energy. Built for the culture — the 6MAN Army rallies around moments that are <em>too cold to ignore</em>.</p>
+      <div class="pill-grid">
+        <div class="pill">No roadmap. Just vibes.</div>
+        <div class="pill">Fair launch spirit</div>
+        <div class="pill">Community first</div>
+      </div>
+      <div class="note">Not affiliated with Drake, OVO, or any artist/label. For fun, memes, and community.</div>
+    </div>
+  </section>
+
+  <section id="how" class="section how">
+    <div class="container">
+      <h2>How to Buy</h2>
+      <ol>
+        <li>Get SOL in your wallet (Phantom or Solflare).</li>
+        <li>Open your DEX (Jupiter/BonkBot) and paste the contract address.</li>
+        <li>Swap SOL → <strong>$6MAN</strong>. Stay cold. ❄</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="tokenomics" class="section tokenomics">
+    <div class="container">
+      <h2>Tokenomics</h2>
+      <div class="cards">
+        <div class="card"><h3>Total Supply</h3><p class="big">1,000,000,000</p></div>
+        <div class="card"><h3>Decimals</h3><p class="big">6</p></div>
+        <div class="card"><h3>Taxes</h3><p>0/0 — we hate fees.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="links" class="section links">
+    <div class="container">
+      <h2>Links</h2>
+      <div class="link-grid">
+        <a class="link-tile" href="https://x.com/The6ManArmy" target="_blank" rel="noopener"><span>𝕏 / Twitter</span> ↗</a>
+        <a class="link-tile" href="#"><span>Telegram</span> ↗</a>
+        <a class="link-tile" href="#"><span>Chart</span> ↗</a>
+        <a class="link-tile" href="#"><span>Buy on DEX</span> ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> 6MAN — Stay cold. For entertainment/community only. Not financial advice.</p>
+    </div>
+  </footer>
+
+<script>
+  // Copy contract
+  const copyBtn = document.getElementById('copy-btn');
+  copyBtn?.addEventListener('click', () => {
+    const text = document.getElementById('contract-text').innerText.replace('CA: ', '');
+    navigator.clipboard.writeText(text);
+    copyBtn.innerText = 'Copied!';
+    setTimeout(()=> copyBtn.innerText = 'Copy', 1200);
+  });
+  // Year
+  document.getElementById('year').innerText = new Date().getFullYear();
+</script>
+</body>
+</html>
